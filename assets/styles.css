@@ -56,21 +56,21 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
     }
-    .card {
+    card {
         background: #1e293b;
         border-radius: 8px;
         padding: 1.5rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    .card h2 {
+    card h2 {
         color: #38bdf8;
         margin-bottom: 1rem;
     }
-    .card ul {
+    card ul {
         list-style: none;
         padding: 0;
     }
-    .card ul li {
+    card ul li {
         margin-bottom: 0.5rem;
     }
     
@@ -86,7 +86,7 @@
     }
     
     /* Icon Styling */
-    .icon {
+    icon {
         vertical-align: middle;
         margin-left: 0.5rem;
         width: 20px;

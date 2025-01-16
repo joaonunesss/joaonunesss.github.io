@@ -5,18 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Nunes - Software Developer</title>
     <style>
+        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #1e293b, #0f172a);
             color: #f8fafc;
+            scroll-behavior: smooth;
         }
+
+        /* Navbar Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0f172a;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: #f8fafc;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Header Styles */
         header {
             text-align: center;
-            padding: 2rem 1rem;
-            background-color: #0f172a;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 5rem 1rem 2rem;
+            background-color: #1e293b;
         }
         header h1 {
             font-size: 2.5rem;
@@ -27,6 +53,8 @@
             font-size: 1.2rem;
             margin: 0.5rem 0;
         }
+
+        /* Section Styles */
         section {
             max-width: 1200px;
             margin: 2rem auto;
@@ -52,6 +80,8 @@
         .card ul li {
             margin-bottom: 0.5rem;
         }
+
+        /* Footer Styles */
         footer {
             text-align: center;
             padding: 1rem 0;
@@ -61,6 +91,16 @@
             margin: 0;
             font-size: 0.9rem;
         }
+
+        /* Icon Styling */
+        .icon {
+            vertical-align: middle;
+            margin-left: 0.5rem;
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Anchor Styles */
         a {
             color: #38bdf8;
             text-decoration: none;
@@ -71,11 +111,21 @@
     </style>
 </head>
 <body>
-    <header>
+    <!-- Navbar -->
+    <nav>
+        <div>
+            <a href="#about">Sobre</a>
+            <a href="#contact">Contactos</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="about">
         <h1>João Nunes</h1>
-        <p>Software Developer | <a href="mailto:jpmn.mail@gmail.com">jpmn.mail@gmail.com</a> | <a href="tel:+351918469571">(+351) 918469571</a></p>
+        <p>Software Developer</p>
     </header>
 
+    <!-- Main Content -->
     <section>
         <div class="card">
             <h2>Skills</h2>
@@ -115,8 +165,11 @@
         </div>
     </section>
 
-    <footer>
-        <p>Find me on <a href="https://linkedin.com/in/jpmnunes">LinkedIn</a> and <a href="https://github.com/joaonunesss">GitHub</a>.</p>
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Find me on <a href="https://linkedin.com/in/jpmnunes" target="_blank">LinkedIn</a> 
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="icon">
+        </p>
     </footer>
 </body>
 </html>

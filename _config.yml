@@ -1,3 +1,29 @@
-remote_theme: pages-themes/minimal@v0.2.0
+# Configuração básica
+title: João Nunes - Software Developer
+description: Portfólio profissional de João Nunes
+theme: minimal
+
+# URL base (use apenas se o site estiver em um subdiretório)
+baseurl: "/portfolio" # Altere conforme o nome do repositório
+
+# Idioma do site
+lang: en
+
+# Links de navegação
+navigation:
+  - name: "Sobre"
+    url: "/#about"
+  - name: "Projetos"
+    url: "/#projects"
+  - name: "Contactos"
+    url: "/#contact"
+
+# Redes sociais
+social_links:
+  github: "https://github.com/joaonunesss"
+  linkedin: "https://linkedin.com/in/jpmnunes"
+
+# Plugins (se necessários)
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-feed
+  - jekyll-seo-tag

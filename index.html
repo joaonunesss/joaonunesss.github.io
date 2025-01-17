@@ -1,148 +1,435 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/favicon.ico">
-    <title>João Nunes - Software Developer</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: #1e293b;
-            color: #f8fafc;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-        header h1 {
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-        }
-        section {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        section h2 {
-            color: #1e293b;
-            margin-bottom: 1rem;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 0.5rem 0;
-        }
-        a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #1e293b;
-            color: #f8fafc;
-        }
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>João Nunes - Software Developer</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
 
-        /* Style for the circular image */
-        .circle {
-            width: 150px; /* Set the width of the circle */
-            height: 150px; /* Set the height of the circle */
-            border-radius: 50%; /* Makes the element a perfect circle */
-            overflow: hidden; /* Ensures the image doesn't overflow the circle */
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- THEME STYLES -->
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
+
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <div class="logo">
+<!--                             <a class="logo-wrap" href="#body">
+                                <img class="logo-img" src="img/favicon.ico" alt="Asentus Logo">
+                            </a> -->
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">About</a></li>
+                               <!--  <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Experience</a></li> -->
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Projects</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
+    <style>  
+        /* Style the Let's Connect heading */
+        .connect-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        /* Style the buttons */
+        .button-group {
             display: flex;
-            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn {
+            display: inline-flex;
             align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visuals */
-            background-color: #fff; /* Optional: Add background color */
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
-
-        /* Image styles */
-        .circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image fits nicely inside the circle */
+        
+        /* GitHub button style */
+        .btn-github {
+            background-color: #333;
+            color: white;
+            border: none;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="#skills">Skills</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#experience">Experience</a> |
-            <a href="#education">Education</a> |
-            <a href="#contact">Contact</a>
-        </nav>
-        <h1>João Nunes</h1>
-        <p>Software Developer</p>
+        .btn-github:hover {
+            background-color: #555;
+        }
+        
+        /* LinkedIn button style */
+        .btn-linkedin {
+            background-color: #0077b5;
+            color: white;
+            border: none;
+        }
+        .btn-linkedin:hover {
+            background-color: #005582;
+        }
+</style>        
+        <!--========== SLIDER ==========-->
+        
+        <div class="promo-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 sm-margin-b-60">
+                        <div class="margin-b-30">
+                            <h1 class="promo-block-title">João <br/> Nunes</h1>
+                            <p class="promo-block-text">Software Developer</p>
+                        </div>
+                        <!-- Add the Let's Connect section -->
+                        <div class="connect-section">
+                            <h3 class="connect-title">Let's Connect</h3>
+                            <div class="button-group">
+                                <a href="https://github.com/joaonunesss" class="btn btn-dark btn-github">
+                                    <i class="icon-social-github"></i> GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/jpmnunes/" class="btn btn-primary btn-linkedin">
+                                    <i class="icon-social-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <!-- Optional profile image -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--========== SLIDER ==========-->
 
-    </header>
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- About -->
+        <div id="about">
+            <div class="container content-lg">
+                <div class="row">
+                    <div class="col-sm-5 sm-margin-b-60">
+                        <img class="full-width img-responsive" src="img/profile1.jpeg" alt="Image">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="section-seperator margin-b-50">
+                            <div class="margin-b-50">
+                                <div class="margin-b-30">
+                                    <h2>About Me</h2>
+                                    <p>I'm a professional with 5+ years of experience in electrotechnical maintenance and industrial automation, 
+                                        now focused on transitioning to software development. Currently studying programming with a focus on C, 
+                                        C++, and Python, bringing automation logic and problem-solving skills to the tech environment. 
+                                        Open to entry-level opportunities in development and programming teams.</p>
+                                </div>
+                                <a href="https://drive.google.com/file/d/12w3TN5UUCNHM61EDT-PvbkErNfL3IJ8t/view?usp=sharing" class="btn-theme btn-theme-md btn-default-bg text-uppercase">Download my CV</a>
+                            </div>
+                        </div>
+<!-- 
+                        <h2>My Skills</h2> -->
+                        <!-- Progress Box -->
+                       <!--  <div class="progress-box">
+                            <h5>Adobe Illustrator <span class="color-heading pull-right">87%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="87"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>Adobe Photoshop <span class="color-heading pull-right">96%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="96"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>Graphic Design <span class="color-heading pull-right">77%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="77"></div>
+                            </div>
+                        </div> -->
+                        <!-- End Progress Box -->
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End About -->
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> C, C++, Python</li>
-            <li><strong>Frameworks:</strong> Django</li>
-            <li><strong>Other:</strong> Shell, Docker</li>
-        </ul>
-    </section>
-    
-    <section>
-        <h2>Public Projects</h2>
-        <ul>
-            <li><a href="https://github.com/joaonunesss/cub3d">Cub3d</a> - Game inspired in Wolfenstein 3D (C)</li>
-            <li><a href="https://github.com/joaonunesss/ft_irc">ft_irc</a> - My own IRC server (C++)</li>
-            <li><a href="https://github.com/joaonunesss/Evaluation_Platform">Eval_Platform</a> - Employee evaluation platform (Python, Django)</li>
-            <li><a href="https://github.com/joaonunesss/Webscrapper">Webscrapper</a> - Website data extraction tool (Python, Django)</li>
-        </ul>
-    </section>
-    
-    <section>
-        <h2>Professional Experience</h2>
-        <ul>
-            <li><strong>Founder:</strong> Machine Parts (2020 – Present)</li>
-            <li><strong>Maintenance Technician:</strong> Ambinext (2019 – 2020)</li>
-            <li><strong>Maintenance Technician:</strong> Metal Partner Portugal (2014 – 2018)</li>
-        </ul>
-    </section>
-    
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Software Development:</strong> 42 Porto (2023 – Present)</li>
-            <li><strong>Technical Specialist in Mechatronics:</strong> CENFIM (2012 – 2013)</li>
-            <li><strong>Coaching and Communication:</strong> IEFP (2021)</li>
-        </ul>
-    </section>
-    
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:jpmn.mail@gmail.com">jpmn.mail@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/jpmnunes" target="_blank">linkedin.com/in/jpmnunes</a></p>
-        <p>GitHub: <a href="https://github.com/joaonunesss" target="_blank">github.com/joaonunesss</a></p>
-        <p>Location: V.N. Famalicão</p>
-    </section>
+        <!-- Experience -->
+       <!--  <div id="experience">
+            <div class="bg-color-sky-light" data-auto-height="true">
+                <div class="container content-lg">
+                    <div class="row row-space-2 margin-b-4">
+                        <div class="col-md-3 col-sm-6 md-margin-b-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-mustache"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Illustrator</h3>
+                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 md-margin-b-4">
+                            <div class="service bg-color-base wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                <div class="service-element">
+                                    <i class="service-icon color-white icon-screen-tablet"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 class="color-white">Graphic Design</h3>
+                                    <p class="color-white margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 sm-margin-b-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-chemistry"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Photoshop</h3>
+                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-badge"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Sketch</h3>
+                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                    </div>
+                    <!--// end row -->
+              <!--   </div>
+            </div>
+        </div> -->
+        <!-- End Experience -->
 
-    <footer>
-        <p>&copy; 2025 João Nunes. All rights reserved.</p>
-    </footer>
-</body>
+        <!-- Work -->
+        <div id="work">
+            <div class="container content-lg">
+                <div class="row margin-b-40">
+                    <div class="col-sm-6">
+                        <h2>Latest Projects</h2>
+                    </div>
+                </div>
+                <!--// end row -->
+
+                <div class="row">
+                    <!-- Latest Projects -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                           <!--  <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                                <img class="img-responsive" src="img/970x647/01.jpg" alt="Latest Products Image">
+                            </div> -->
+                        </div>
+                        <h4><a href="">Cub3d</a> <span class="text-uppercase margin-l-20">Technologies: C</span></h4>
+                        <p>Game inspired in Wolfenstein 3D</p>
+                        <a class="link" href="https://github.com/joaonunesss/cub3d">See Code</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <!-- <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                                <img class="img-responsive" src="img/970x647/02.jpg" alt="Latest Products Image">
+                            </div> -->
+                        </div>
+                        <h4><a href="#">Webscrapper </a> <span class="text-uppercase margin-l-20">Technologies: Python, Django</span></h4>
+                        <p>A tool to extract data from websites</p>
+                        <a class="link" href="#">See Code</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <!-- <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                                <img class="img-responsive" src="img/970x647/03.jpg" alt="Latest Products Image">
+                            </div> -->
+                        </div>
+                        <h4><a href="#">ft_irc</a> <span class="text-uppercase margin-l-20">Technologies: C++</span></h4>
+                        <p>My own IRC sever to communicate on the internet</p>
+                        <a class="link" href="#">See Code</a>
+                    </div>
+                    <!-- End Latest Products -->
+                     
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Work -->
+
+        <!-- Clients -->
+        <!-- <div class="bg-color-sky-light">
+            <div class="content-lg container">
+                <!-- Swiper Clients -->
+               <!--  <div class="swiper-slider swiper-clients"> -->
+                    <!-- Swiper Wrapper -->
+                    <!-- <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="swiper-clients-img" src="img/clients/01.png" alt="Clients Logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-clients-img" src="img/clients/02.png" alt="Clients Logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-clients-img" src="img/clients/03.png" alt="Clients Logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-clients-img" src="img/clients/04.png" alt="Clients Logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-clients-img" src="img/clients/05.png" alt="Clients Logo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-clients-img" src="img/clients/06.png" alt="Clients Logo">
+                        </div>
+                    </div> -->
+                    <!-- End Swiper Wrapper -->
+               <!--  </div> -->
+                <!-- End Swiper Clients -->
+          <!--   </div>
+        </div> -->
+        <!-- End Clients -->
+
+        <!-- Promo Banner -->
+       <!--  <div class="promo-banner parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
+            <div class="container-sm content-lg">
+                <h2 class="promo-banner-title">Displaying the Result</h2>
+                <p class="promo-banner-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            </div>
+        </div> -->
+        <!-- End Promo Banner -->
+            
+        <!-- Contact -->
+        <div id="contact">
+            <div class="bg-color-sky-light">
+                <div class="container content-lg">
+                    <div class="row margin-b-40">
+                        <div class="col-sm-6">
+                           <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <!--// end row -->
+
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6 md-margin-b-30">
+                            <h4>Location</h4>
+                            <a href="#">V.N. Famalicão</a>
+                        </div>
+<!--                         <div class="col-md-3 col-xs-6 md-margin-b-30">
+                            <h4>Phone</h4>
+                            <a href="#">+77 234 548 00 00</a>
+                        </div> -->
+                        <div class="col-md-3 col-xs-6">
+                            <h4>Email</h4>
+                            <a href="mailto:#">jpmn.mail@gmail.com</a>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <h4>Web</h4>
+                            <a href="#">joaonunes.pt</a>
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Contact -->
+        <!--========== END PAGE LAYOUT ==========-->
+
+        <!--========== FOOTER ==========-->
+     <!--    <footer class="footer">
+            <div class="content container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img class="footer-logo" src="img/logo.png" alt="Acecv Logo">
+                    </div>
+                    <div class="col-xs-6 text-right sm-text-left">
+                        <p class="margin-b-0"><a class="fweight-700" href="http://keenthemes.com/preview/acecv/">Acecv</a> Theme Powered by: <a class="fweight-700" href="http://www.keenthemes.com/">KeenThemes.com</a></p>
+                    </div>
+                </div> -->
+                <!--// end row -->
+<!--             </div>
+        </footer> -->
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery.appear.js" type="text/javascript"></script>
+        <script src="vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/components/progress-bar.min.js" type="text/javascript"></script>
+        <script src="js/components/swiper.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+
+    </body>
+    <!-- END BODY -->
 </html>
-
